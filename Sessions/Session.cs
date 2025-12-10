@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cardagain
+namespace Cardagain.Sessions
 {
-    internal class Utils
+    public class Session
     {
-        
+
     }
 }

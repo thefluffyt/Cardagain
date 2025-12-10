@@ -363,4 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Hidden Variables
-config.json
+Config/config.json
