@@ -30,11 +30,6 @@ namespace Cardagin.Decks
                 Cards[n] = value;
             }
         }
-
-        public void doStuff()
-        {
-            EmptyDeck emptyDeck = new EmptyDeck();
-        }
     }
 
     public class EmptyDeck : Deck

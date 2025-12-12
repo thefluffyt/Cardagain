@@ -10,47 +10,12 @@ namespace Cardagin.Decks
         {
             return "Card Rank Suit Combo not valid";
         }
-    }
 
-    public class StandardCard : Card
-    {
-        public Rank Rank { get; private set; }
-        public Suit Suit { get; private set; }
-        public StandardCard(Rank rank, Suit suit)
+        public virtual string GetShortCardName()
         {
-            Rank = rank;
-            Suit = suit;
-        }
-
-        public override string GetCardName()
-        {
-            return $"{Rank} of {Suit}s";
+            return "Card Rank Suit Combo not valid";
         }
     }
 
-    public enum Rank
-    {
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King,
-        Ace,
-        Joker
-    }
-
-    public enum Suit
-    {
-        Club,
-        Diamond,
-        Heart,
-        Spade
-    }
+    
 }

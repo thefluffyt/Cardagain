@@ -10,6 +10,6 @@ namespace Cardagin.Sessions
         public ulong UserId;
         public string UserName;
 
-        public Dictionary<ulong, Deck>
+        public Dictionary<ulong, Deck> Decks = new Dictionary<ulong, Deck>();
     }
 }

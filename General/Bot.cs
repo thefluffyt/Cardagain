@@ -41,10 +41,12 @@ namespace Cardagin
             {
                 StringPrefixes = new string[] { configJson.Prefix },
                 EnableDms = true,
-
+                DmHelp = true,
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);
+
+            Commands.RegisterCommands<Games.Commands.GameCommands>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
