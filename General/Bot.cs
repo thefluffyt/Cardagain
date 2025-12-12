@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
-using Cardagain.Config;
+using Cardagin.Config;
 
-namespace Cardagain
+namespace Cardagin
 {
     public class Bot
     {

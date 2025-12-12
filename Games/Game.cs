@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cardagain.Games
+namespace Cardagin.Games
 {
     public abstract class Game
     {

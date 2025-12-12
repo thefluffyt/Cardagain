@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cardagain
+namespace Cardagin
 {
     class Program
     {

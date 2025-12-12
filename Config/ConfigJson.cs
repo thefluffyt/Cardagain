@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cardagain.Config
+namespace Cardagin.Config
 {
     struct ConfigJson
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cardagain
+namespace Cardagin
 {
     internal class Utils
     {

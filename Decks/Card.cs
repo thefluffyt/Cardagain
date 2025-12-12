@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cardagain.Decks
+namespace Cardagin.Decks
 {
     public abstract class Card
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cardagain.Sessions
+namespace Cardagin.Sessions
 {
     public class Session
     {
