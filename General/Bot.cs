@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 using Cardagin.Config;
+using Cardagin.Games;
 
 namespace Cardagin
 {
@@ -14,11 +15,13 @@ namespace Cardagin
         public DiscordClient? Client { get; private set; }
         public CommandsNextExtension? Commands { get; private set; }
 
+        public List<Game> GameList = new List<Game>();
+
         public async Task RunAsync()
         {
             var json = string.Empty;
 
-            using (var fs = File.OpenRead("config.json"))
+            using (var fs = File.OpenRead("C:\\Projects\\Cardagain\\Config\\config.json"))
             {
                 using (var sr = new StreamReader(fs, new UTF8Encoding(false)))
                 {
@@ -32,7 +35,8 @@ namespace Cardagin
             {
                 Token = configJson.Token,
                 TokenType = TokenType.Bot,
-                AutoReconnect = true
+                AutoReconnect = true,
+                Intents = DiscordIntents.MessageContents | DiscordIntents.GuildMessages | DiscordIntents.DirectMessages
             };
 
             Client = new DiscordClient(config);
@@ -47,6 +51,8 @@ namespace Cardagin
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<Games.Commands.GameCommands>();
+
+            GameList.Add(Blackjack);
 
             await Client.ConnectAsync();
             await Task.Delay(-1);
