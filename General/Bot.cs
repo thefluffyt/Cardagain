@@ -7,6 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Cardagin.Config;
 using Cardagin.Games;
+using DSharpPlus.Entities;
 
 namespace Cardagin
 {
@@ -15,7 +16,7 @@ namespace Cardagin
         public DiscordClient? Client { get; private set; }
         public CommandsNextExtension? Commands { get; private set; }
 
-        public List<Game> GameList = new List<Game>();
+        public static Dictionary<DiscordChannel, Game> ActiveGames = new Dictionary<DiscordChannel, Game>();
 
         public async Task RunAsync()
         {
@@ -51,8 +52,6 @@ namespace Cardagin
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<Games.Commands.GameCommands>();
-
-            GameList.Add(Blackjack);
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

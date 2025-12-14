@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSharpPlus.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +15,21 @@ namespace Cardagin.Games
             MaxPlayers = 7;
             CanHotJoin = true;
             GameDeck = new Decks.StandardDeck();
+        }
+
+        public override void Start(DiscordChannel channel)
+        {
+            base.Start(channel);
+        }
+
+        public override void Begin()
+        {
+            base.Begin();
+        }
+
+        public override void End()
+        {
+            base.End();
         }
     }
 }
